@@ -3,6 +3,7 @@ import {
   Container,
   Flex,
   Heading,
+  Link,
   Stack,
   Text,
   useColorModeValue
@@ -10,7 +11,36 @@ import {
 import Logo from 'components/Logo'
 import ThemeToggle from 'components/ThemeToggle'
 import COLORS from 'lib/colors'
-const Navbar = () => {
+import NextLink from 'next/link'
+
+const LinkItem = ({
+  href,
+  path,
+  children,
+  _target
+}: {
+  href: string
+  path: string
+  children: React.ReactNode
+  _target?: string
+}) => {
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  return (
+    <NextLink href={href} passHref>
+      <Link
+        p={2}
+        bg={active ? 'brand' : undefined}
+        color={active ? '#202023' : inactiveColor}
+        _target={_target}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  )
+}
+
+const Navbar = ({ path }: { path: any }) => {
   return (
     <Box
       left="0"
@@ -39,9 +69,13 @@ const Navbar = () => {
           alignItems="center"
           flexGrow={1}
           direction={{ base: 'column', md: 'row' }}
-          spacing={16}
         >
-          <Text> Test</Text>
+          <LinkItem href="/about" path={path}>
+            About
+          </LinkItem>
+          <LinkItem href="/posts" path={path}>
+            Posts
+          </LinkItem>
         </Stack>
         <Flex flex={1} justify={'right'}>
           <ThemeToggle />
