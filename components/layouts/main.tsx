@@ -20,7 +20,7 @@ const Layout = ({ children, router }: LayoutProps) => {
 
       <Font />
 
-      <Navbar />
+      <Navbar path={router.asPath} />
 
       {children}
 
