@@ -5,7 +5,6 @@ import {
   Heading,
   Link,
   Stack,
-  Text,
   useColorModeValue
 } from '@chakra-ui/react'
 import Logo from 'components/Logo'
@@ -26,12 +25,12 @@ const LinkItem = ({
 }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const activeColor = useColorModeValue('#0645AD', 'orange')
   return (
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? 'brand' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        color={active ? activeColor : inactiveColor}
         _target={_target}
       >
         {children}
@@ -68,18 +67,22 @@ const Navbar = ({ path }: { path: any }) => {
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
+          justify="flex-end"
           direction={{ base: 'column', md: 'row' }}
         >
           <LinkItem href="/about" path={path}>
             About
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
+          {/* 
+            TODO: Reenable when I have actual posts
+            <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
+          */}
         </Stack>
-        <Flex flex={1} justify={'right'}>
+        <Box ml={16}>
           <ThemeToggle />
-        </Flex>
+        </Box>
       </Container>
     </Box>
   )

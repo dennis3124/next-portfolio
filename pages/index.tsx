@@ -9,11 +9,13 @@ import {
 import { ClassNames } from '@emotion/react'
 import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 
 const Home: NextPage = () => {
   const [showForward, setShowForward] = React.useState(false)
+  const router = useRouter()
   const variants = {
     appear: { opacity: 1 }
   }
@@ -37,10 +39,11 @@ const Home: NextPage = () => {
               onInit={typewriter => {
                 typewriter
                   .typeString('Welcome to my space...')
+                  .start()
                   .callFunction(() => {
                     setShowForward(true)
                   })
-                  .start()
+                  .pauseFor(2500)
               }}
             />
           )}
@@ -57,7 +60,7 @@ const Home: NextPage = () => {
               aria-label="Toggle Theme Between Light and Dark"
               colorScheme={useColorModeValue(`brand`, 'orange')}
               icon={<ArrowForwardIcon />}
-              onClick={() => alert('clicked')}
+              onClick={() => router.push('/about')}
             />
           </motion.div>
         </Flex>

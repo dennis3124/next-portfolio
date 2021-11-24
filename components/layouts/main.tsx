@@ -1,5 +1,4 @@
-import { Container } from '@chakra-ui/react'
-import Footer from 'components/Footer'
+import { Box, Container } from '@chakra-ui/react'
 import Navbar from 'components/Navbar'
 import Font from 'lib/font'
 import Head from 'next/head'
@@ -21,10 +20,7 @@ const Layout = ({ children, router }: LayoutProps) => {
       <Font />
 
       <Navbar path={router.asPath} />
-
-      {children}
-
-      <Footer />
+      <Box pt={14}>{children}</Box>
     </Container>
   )
 }
