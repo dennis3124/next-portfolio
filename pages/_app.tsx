@@ -6,13 +6,13 @@ import theme from 'lib/theme'
 import type { AppProps } from 'next/app'
 
 const MyApp = function ({ Component, pageProps, router }: AppProps) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Layout router={router}>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
-  )
+	return (
+		<ChakraProvider theme={theme}>
+			<Layout router={router}>
+				<Component {...pageProps} />
+			</Layout>
+		</ChakraProvider>
+	)
 }
 
 export default MyApp

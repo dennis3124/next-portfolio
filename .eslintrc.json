@@ -6,6 +6,7 @@
   ],
   "plugins": ["simple-import-sort"],
   "rules": {
+    "indent": ["error", "tab"],
     "no-unused-vars": [
       "error",
       {
