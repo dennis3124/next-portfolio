@@ -16,7 +16,6 @@ import type { NextPage } from 'next'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const Paragraph = styled(Text)`
-  text-indent: 1em;
   text-align: justify;
 `
 
@@ -66,14 +65,19 @@ const About: NextPage = () => {
             Work
 					</Heading>
 					<Paragraph>
-            Dennis is a full-stack developer currently working &nbsp;
-						<ExternalLink href="https://www.zillow.com" text={'@ZillowGroup'} />
+            Dennis is a senior software engineer currently working &nbsp;
+						<ExternalLink href="https://www.intuitive.com/en-us" text={'@Intuitive'} />
             . Based out of Silicon Valley, Dennis is surrounded by the brilliant
             minds that powers the world. Outside of work, Dennis enjoys playing
             League of Legends (
 						<ExternalLink
 							href="https://na.op.gg/summoner/userName=cryoutloud"
 							text={'@CryOutLoud'}
+						/>
+            ), working on his project (
+						<ExternalLink
+							href="https://supr.cloud"
+							text={'@Supr'}
 						/>
             ) and enjoying a chill weekend with his cats.
 					</Paragraph>
@@ -85,20 +89,20 @@ const About: NextPage = () => {
 					<Heading size="lg" as="h3" mb={4}>
             Bio
 					</Heading>
-					<Box display="flex">
+					<Box>
 						<Text fontWeight={'bold'}>2017</Text>
 						<Paragraph>
-              Graduated from Purdue University and started &nbsp;
+              Graduated from Purdue University and started working for&nbsp;
 							<ExternalLink
 								href="https://www.grabqpons.com"
 								text={'@Grabqpons'}
 							/>
 						</Paragraph>
 					</Box>
-					<Box display="flex">
+					<Box>
 						<Text fontWeight={'bold'}>2018</Text>
 						<Paragraph>
-              Moved to California and started at &nbsp;
+              Moved to California and started working for &nbsp;
 							<ExternalLink
 								href="https://www.crunchbase.com/organization/keyo-ai"
 								text={'@KeyoAI'}
@@ -106,11 +110,16 @@ const About: NextPage = () => {
 						</Paragraph>
 					</Box>
 
-					<Box display="flex">
-						<Text fontWeight={'bold'}>2020 to Present</Text>
-						<Paragraph>
-              Started at Zillow when Keyo AI got acquired by Zillow Group
+					<Box>
+						<Text marginRight={8} fontWeight={'bold'}>2020</Text>
+						<Paragraph>Helped with integration of Keyo's software into <ExternalLink href="https://www.zillow.com" text={'@ZillowGroup'} /> 
+						&nbsp; when Keyo AI got acquired by Zillow Group
 						</Paragraph>
+					</Box>
+
+					<Box>
+						<Text fontWeight={'bold'}>2022 - Present</Text>
+						<Paragraph> Helped launched the myIntuitive for web at <ExternalLink href="https://www.intuitive.com/en-us" text={'@Intuitive'} /> </Paragraph>
 					</Box>
 				</Box>
 			</Section>

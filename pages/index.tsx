@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 							}}
 							onInit={typewriter => {
 								typewriter
-									.typeString('Welcome to my space...')
+									.typeString('Dennis Chia, software engineer...')
 									.start()
 									.callFunction(() => {
 										setShowForward(true)
