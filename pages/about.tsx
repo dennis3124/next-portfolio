@@ -112,7 +112,7 @@ const About: NextPage = () => {
 
 					<Box>
 						<Text marginRight={8} fontWeight={'bold'}>2020</Text>
-						<Paragraph>Helped with integration of Keyo's software into <ExternalLink href="https://www.zillow.com" text={'@ZillowGroup'} /> 
+						<Paragraph>Helped with integration of Keyo&apos;s software into <ExternalLink href="https://www.zillow.com" text={'@ZillowGroup'} /> 
 						&nbsp; when Keyo AI got acquired by Zillow Group
 						</Paragraph>
 					</Box>

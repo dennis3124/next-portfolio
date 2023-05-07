@@ -8,21 +8,21 @@ interface LayoutProps {
   children: React.ReactNode
 }
 const Layout = ({ children, router }: LayoutProps) => {
-  return (
-    <Container>
-      <Head>
-        <title>Dennis Chia</title>
-        <meta name="description" content="NextJS Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<Container>
+			<Head>
+				<title>Dennis Chia</title>
+				<meta name="description" content="NextJS Portfolio" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-      <Font />
+			<Font />
 
-      <Navbar path={router.asPath} />
-      <Box pt={14}>{children}</Box>
-    </Container>
-  )
+			<Navbar path={router.asPath} />
+			<Box pt={14}>{children}</Box>
+		</Container>
+	)
 }
 
 export default Layout

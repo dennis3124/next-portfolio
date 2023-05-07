@@ -1,5 +1,5 @@
 const Fonts = () => (
-  <style jsx global>{`
+	<style jsx global>{`
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   `}</style>
 )

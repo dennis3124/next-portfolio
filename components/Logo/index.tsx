@@ -7,15 +7,15 @@ const TextLink = styled(Text)`
 `
 
 const Logo = () => {
-  return (
-    <Box>
-      <NextLink href="/">
-        <TextLink fontFamily={'Rubik, san-serif'} ml={3}>
+	return (
+		<Box>
+			<NextLink href="/">
+				<TextLink fontFamily={'Rubik, san-serif'} ml={3}>
           Dennis Chia
-        </TextLink>
-      </NextLink>
-    </Box>
-  )
+				</TextLink>
+			</NextLink>
+		</Box>
+	)
 }
 
 export default Logo
