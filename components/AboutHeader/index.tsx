@@ -5,7 +5,7 @@ const AboutHeader: NextPage = () => {
 	return (
 		<Box>
 			<Box mb={8}>
-				<Avatar size={'2xl'} name="Dennis Chia" src={'/images/dennis.jpg'} />
+				<Avatar size={'2xl'} name="Dennis Chia" src={'/images/dennis.png'} />
 			</Box>
 			<Box>
 				<Heading size="2xl" as="h1">
